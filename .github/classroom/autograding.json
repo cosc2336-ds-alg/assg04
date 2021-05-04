@@ -18,7 +18,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 0
     },
     {
       "name": "test task1sumIterative",
