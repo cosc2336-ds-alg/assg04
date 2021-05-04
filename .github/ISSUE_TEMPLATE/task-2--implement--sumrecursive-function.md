@@ -1,7 +1,7 @@
 ---
-name: 'Task 2: Implement 'sumRecursive() Function'
+name: 'Task 2: Implement `sumRecursive()` Function'
 about: Task 2 for Students
-title: 'Task 2: Implement 'sumRecursive() Function''
+title: 'Task 2: Implement `sumRecursive()` Function'
 labels: enhancement
 assignees: ''
 
