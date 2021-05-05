@@ -1,11 +1,12 @@
-/** @file assg03-recursion.hpp
- * @brief Header file for Assignment 03, recursion
+/** @file assg-recursion.hpp
+ * @brief Header file for Assignment Recursion: Writing and Understanding
+ *   Recursive Functions
  *
  * @author Jane Programmer
  * @note   cwid : 123 45 678
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VSCode Server 3.9.3, Gnu Development Tools
- * @note   assg : Assignment 03
+ * @note   assg : Assignment Recursion
  * @date   June 1, 2021
  *
  * Implement several functions using both iteration and recursion.
@@ -21,17 +22,17 @@
  * and member functions should be put into the [.cpp] implementation
  * file.
  */
-#ifndef _ASSG03_RECURSION_HPP_
-#define _ASSG03_RECURSION_HPP_
+#ifndef _ASSG_RECURSION_HPP_
+#define _ASSG_RECURSION_HPP_
 #include <iostream>
 #include "List.hpp"
 using namespace std;
 
 
-// function prototypes for assignment 03
+// function prototypes for Assignment Recursion
 // You will need to add in the correct function protypes for the functions
 // you are to write for this assignment here.  The actual implementation
 // of your functions should be put into the corresponding [x.cpp]
 // source implementation file.
 
-#endif // _ASSG03_RECURSION_HPP_
+#endif // _ASSG_RECURSION_HPP_

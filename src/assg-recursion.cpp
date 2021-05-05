@@ -1,12 +1,12 @@
-/** @file assg03-recursion.cpp
- * @brief Recursive function implementations for 
- *   Assignment 03, recursion
+/** @file assg-recursion.cpp
+ * @brief Recursive function implementations for Assignment Recursion:
+ *   Writing and Understanding Recursive Functions
  *
  * @author Jane Programmer
  * @note   cwid : 123 45 678
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VSCode Server 3.9.3, Gnu Development Tools
- * @note   assg : Assignment 03
+ * @note   assg : Assignment Recursion
  * @date   June 1, 2021
  *
  * Implement several functions using both iteration and recursion.
@@ -14,7 +14,7 @@
  * write functions taking arrays as input to be manipulated.
  *
  * This file contains the actual implementation of the functions
- * and code you are required to complete for assignment 03.
+ * and code you are required to complete for Assignment Recursion.
  * Make sure you modify the file header information to be correct
  * for the code you are creating.
  */

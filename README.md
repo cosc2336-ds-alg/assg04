@@ -1,5 +1,5 @@
 ---
-title: 'Assignment 03: Recursion'
+title: 'Assignment Recursion: Understanding and Writing Recursive Functions '
 author: 'COSC 2336: Data Structures and Algorithms'
 date: 'Summer 2021'
 ---
@@ -69,35 +69,37 @@ using and adding code to for this assignment.
 
 | File Name                                     | Description                                                                                         |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| `src/assg03-tests.cpp`                        | Unit tests for the recursive functions class you are to implement.                                  |
+| `src/assg-tests.cpp`                        | Unit tests for the recursive functions class you are to implement.                                  |
 | `include/List.hpp`                            | Header file for the declarations of the `List` class you will be using and its defined API.         |
 | `src/List.cpp`                                | Implementation file for the `List` member functions that implement the API and class functionality. |
-| `include/assg03-recursion.hpp`                | Header file for function prototypes you will be implementing in this assignment.                    |
-| `src/assg03-recursion.cpp`                    | Implementation files where you will write your code for this assignment.                            |
+| `include/assg-recursion.hpp`                | Header file for function prototypes you will be implementing in this assignment.                    |
+| `src/assg-recursion.cpp`                    | Implementation files where you will write your code for this assignment.                            |
 
 You will not be modifying any code in the `List.[hpp|cpp]` files, you
 will only be using this class.  All of your code will be written in
-the `assg03-recursion.[hpp|cpp]` files.  This week, though you are
+the `assg-recursion.[hpp|cpp]` files.  This week, though you are
 using a class, you will be writing just regular C functions again, not
 class member functions.
 
 As usual, before starting on the assignment tasks proper, you should make sure
 you have completed the following setup steps.
 
-1. Copy the assignment repository on GitHub using the provided assignment
-   invitation link for assg02 for our current class semester and section.
-2. Clone the repository using the SSH URL to your local class DevBox
+1. Copy the assignment repository on GitHub using the provided
+   assignment invitation link for 'Assignment Recursion' for our
+   current class semester and section.
+2. Clone the repository using the SSH url to your local class DevBox
    development environment.
-3. Checkout the 'origins/feedback' branch to your local working DevBox
+3. Checkout the 'origins/feedback' branch to your locak working DevBox
    repository.
-4. Confirm that the project builds and runs, though no tests will be
+4. Configure the project by running the `configure` script from a terminal.
+5. Confirm that the project builds and runs, though no tests will be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
-5. You should create the issue for Task 1 and/or for all tasks for the assignment
+6. You should create the issue for Task 1 and/or for all tasks for the assignment
    now before beginning the first task.  On your GitHub account, go to issues,
    and create it/them from the issue templates for the assignment.  Also you
    should close the initial Pull request that should be automatically
-   opened for you, so that you can open your own when committing your work.
+   opened for you, so that you can open your own when commiting your work.
 
 
 # Assignment Tasks
@@ -126,13 +128,13 @@ to understand how you will use this class in your own functions.
 Start by uncommenting the next test case with the set of tests for the
 `sumIterative()` function.  As usual you are encouraged to practice
 incremental programming.  Uncomment this test case, create the
-function prototype in the `assg03-recursion.hpp` header file, and create
+function prototype in the `assg-recursion.hpp` header file, and create
 an empty stub function that simply returns a 0 result.  This should allow
 you to have a program that compiles and runs the tests cases for your
 first function, though the tests will not be passing yet.
 
 As another wrinkle, you have not been given the function documentation for the
-function you are to write in the `assg03-recursion.cpp` header file.  You
+function you are to write in the `assg-recursion.cpp` header file.  You
 are required to write correct function documentation for your functions this
 week.  This includes a short title, a longer description, and documenting the
 input parameters and return value using `@param` and `@returns` tags
@@ -477,7 +479,7 @@ style/formatting issues will be required for programs for this class:
 The following are suggested online materials you may use to help you understand
 the tools and topics we have introduced in this assignment.
 
-- [Lecture U0-4-1 Recursion](https://www.youtube.com/watch?v=uHoz08ByOD8&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=13&t=1s)
+- [Lecture U04-1 Recursion](https://www.youtube.com/watch?v=uHoz08ByOD8&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=13&t=1s)
 - [What is recursion?](https://www.cplusplus.com/articles/D2N36Up4/)
 - [Recursion Basics - using Factorial](https://www.youtube.com/watch?v=_OmRGjbyzno&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=1)
 - [Why recursion is not always good](https://www.youtube.com/watch?v=GM9sA5PtznY&list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&index=2)

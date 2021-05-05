@@ -5,7 +5,7 @@
  * @author Derek Harter
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VSCode Server 3.9.3, Gnu Development Tools
- * @note   assg : Assignment 03
+ * @note   assg : Assignment Recursion
  * @date   June 1, 2021
  *
  * Implementations of a basic List of integers.  Sort of a preview
@@ -65,7 +65,7 @@ List::List(int size, int values[])
  * Where of course existingList was a previously created List.  This copy
  * constructor, as the name suggests, should make a copy of the values from
  * the given input list into a new List instance.
- * 
+ *
  * @param list The other List type we are to make a copy of in this
  *   constructor.
  */
@@ -109,6 +109,7 @@ int List::getSize() const
 {
   return size;
 }
+
 
 /** List to string
  * Accessor method to construct and return a string representation
@@ -161,8 +162,8 @@ int& List::operator[](int index)
   {
     ostringstream out;
     out << "Error: illegal bounds access, list size: " << size
-	<< " tried to access index address: " << index;
-    
+        << " tried to access index address: " << index;
+
     throw ListMemoryBoundsException(out.str(), size, index);
   }
 
@@ -176,7 +177,7 @@ int& List::operator[](int index)
  * list.  The lists are equal if their sizes are equal, and if
  * all elements in both lists are equal.
  *
- * @param rhs The other list on the right hand side of the 
+ * @param rhs The other list on the right hand side of the
  *   boolean comparison that we are comparing this List to.
  *
  * @returns bool true if the lists are equal, false if the are not.
@@ -206,6 +207,7 @@ bool List::operator==(const List& rhs) const
   return true;
 }
 
+
 /** List output operator
  *@brief overload output stream operator for List type.
  *
@@ -214,7 +216,7 @@ bool List::operator==(const List& rhs) const
  *
  * @param out The output stream we should send the representation
  *   of the current List to.
- * @param list The List object to create and return a string
+ * @param rhs The List object to create and return a string
  *   representation of on the output stream.
  *
  * @returns ostream& Returns a reference to the originaly provided
@@ -225,11 +227,10 @@ ostream& operator<<(ostream& out, const List& rhs)
 {
   // reuse List str() method to stream to output stream
   out << rhs.str();
-  
+
   // return the modified output stream as our result
   return out;
 }
-
 
 
 /**
@@ -238,7 +239,9 @@ ostream& operator<<(ostream& out, const List& rhs)
  * Constructor for exceptions used for our
  * List  class.
  *
- * @param msg The exception message thrown when an error occurs.
+ * @param message The exception message thrown when an error occurs.
+ * @param size The current size of the List that was indexed.
+ * @param index The index value that was attempted on the list.
  */
 ListMemoryBoundsException::ListMemoryBoundsException(const string& message, int size, int index)
 {
@@ -272,4 +275,3 @@ const char* ListMemoryBoundsException::what() const throw()
   // what expects old style array of characters, so convert to that
   return message.c_str();
 }
-

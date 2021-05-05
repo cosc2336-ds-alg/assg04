@@ -1,11 +1,11 @@
-/** @file assg03-main.cpp
- * @brief main/debug executable for Assignment 03, recursion
- *   and dynamic memory allocation.
+/** @file assg-main.cpp
+ * @brief main/debug executable for Assignment Recursion: Writing
+ *   and Understanding Recursive Functions
  *
  * @author Derek Harter
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VSCode Server 3.9.3, Gnu Development Tools
- * @note   assg : Assignment 03
+ * @note   assg : Assignment Recursion
  * @date   June 1, 2021
  *
  * Implement several functions using both iteration and recursion.
@@ -17,6 +17,7 @@
  */
 #include <iostream>
 #include "List.hpp"
+#include "assg-recursion.hpp"
 using namespace std;
 
 
@@ -35,8 +36,8 @@ using namespace std;
 int main(int argc, char** argv)
 {
   // do something here to test/debug the assignment code
-  cout << "Hello assignment 03" << endl;
-  
+  cout << "Hello Assignment Recursion" << endl;
+
   // return 0 to indicate successful completion of program
   return 0;
 }

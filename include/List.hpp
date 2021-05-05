@@ -4,7 +4,7 @@
  * @author Derek Harter
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VSCode Server 3.9.3, Gnu Development Tools
- * @note   assg : Assignment 03
+ * @note   assg : Assignment Recursion
  * @date   June 1, 2021
  *
  * Definitions of a basic List of integers.  Sort of a preview
@@ -29,7 +29,7 @@ using namespace std;
 class List
 {
 private:
-  
+
   /// @brief the current size of the list of integer values
   int size;
   /// @brief the integer values contained in the list.  This will
@@ -46,7 +46,7 @@ public:
   // accessor methods
   int getSize() const;
   string str() const;
-  
+
   // overloaded operators
   int& operator[](int index);
   bool operator==(const List& rhs) const;
@@ -55,7 +55,7 @@ public:
 
 
 /** @class ListMemoryBoundsException
- * @brief Memory Bounds Exception for the List class. 
+ * @brief Memory Bounds Exception for the List class.
  *
  * Exception to be thrown by our List class if an illegal
  * memory bounds access is attempted.
@@ -66,14 +66,15 @@ class ListMemoryBoundsException : public exception
 public:
   explicit ListMemoryBoundsException(const string& message, int size, int index);
   ~ListMemoryBoundsException();
-  virtual const char* what() const  throw();
+  virtual const char* what() const throw();
 
 private:
   /// Stores the particular message describing what caused the exception.
-  int size;
-  int index;
   string message;
+  /// The size of the List when an illegal memory access was attempted.
+  int size;
+  /// The index into the list that was attempted that caused the illegal access.
+  int index;
 };
 
 #endif  // define _LIST_HPP_
-
