@@ -20,7 +20,6 @@
  */
 #include "List.hpp"
 
-
 // In this assignment you will not be given the function documentation
 // comments ahead of time.  But you are required to write function
 // documentation for all of your functions for this assignment.  You must

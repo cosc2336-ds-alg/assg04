@@ -17,18 +17,16 @@
  * catch2 unit test framework to define the test cases and
  * test assertions.
  */
-#include <iostream>
-#include "catch.hpp"
 #include "List.hpp"
 #include "assg-recursion.hpp"
+#include "catch.hpp"
+#include <iostream>
 using namespace std;
-
 
 /** Tests of the List type you have been given to use for
  * this assignment.
  */
-TEST_CASE("<List> test of List user defined type for this assignment",
-          "[ListTests]")
+TEST_CASE("<List> test of List user defined type for this assignment", "[ListTests]")
 {
   // construct an empty list
   List l1;
@@ -129,7 +127,7 @@ TEST_CASE("<List> test of List user defined type for this assignment",
   CHECK_FALSE(l3 == l2);
 
   // test empty lists are equal
-  List l4;  // another empty list, like l1
+  List l4; // another empty list, like l1
   CHECK(l1 == l4);
   CHECK(l4 == l1);
 
@@ -161,9 +159,7 @@ TEST_CASE("<List> test of List user defined type for this assignment",
   List l7(4, values7);
   CHECK_FALSE(l6 == l7);
   CHECK_FALSE(l7 == l6);
-
 }
-
 
 /** Task 1: implement an iterative version of summing an array
  * of integer values.
@@ -229,7 +225,6 @@ TEST_CASE("<List> test of List user defined type for this assignment",
    }
  */
 
-
 /** Task 2: implement a recursive version of summing an array of
  * integer values.  Notice all results of recursion should get the
  * same result as the iterative approach.
@@ -284,7 +279,6 @@ TEST_CASE("<List> test of List user defined type for this assignment",
    CHECK_THROWS_AS( sumRecursive(l4, -1, 5), ListMemoryBoundsException);
    }
  */
-
 
 /** Task 3: implement an iterative version of reversing the elements
  * of a List.
@@ -341,7 +335,6 @@ TEST_CASE("<List> test of List user defined type for this assignment",
    CHECK_THROWS_AS( reverseIterative(l5, 0, 10), ListMemoryBoundsException);
    }
  */
-
 
 /** Task 4: implement a recursive version of reversing the elements
  * of a List.  Notice that all tests are the same as the iterative
@@ -400,7 +393,6 @@ TEST_CASE("<List> test of List user defined type for this assignment",
    CHECK_THROWS_AS( reverseRecursive(l5, 0, 10), ListMemoryBoundsException);
    }
  */
-
 
 /** Task 5: implement function to test if a list is a palindrome
  * by reusing one of your reverseX() functions.
@@ -466,7 +458,6 @@ TEST_CASE("<List> test of List user defined type for this assignment",
    CHECK_THROWS_AS( isPalindromeIterative(l5, 0, 12), ListMemoryBoundsException);
    }
  */
-
 
 /** Task 6: implement function to test if a list is a palindrome
  * using a recursive function.  Notice that we do exactly the same

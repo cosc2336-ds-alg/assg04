@@ -16,7 +16,6 @@
 #include <iostream>
 using namespace std;
 
-
 /** @class List
  * @brief A basic List of integer values for the assignment.
  *
@@ -29,7 +28,6 @@ using namespace std;
 class List
 {
 private:
-
   /// @brief the current size of the list of integer values
   int size;
   /// @brief the integer values contained in the list.  This will
@@ -52,7 +50,6 @@ public:
   bool operator==(const List& rhs) const;
   friend ostream& operator<<(ostream& out, const List& rhs);
 };
-
 
 /** @class ListMemoryBoundsException
  * @brief Memory Bounds Exception for the List class.
@@ -77,4 +74,4 @@ private:
   int index;
 };
 
-#endif  // define _LIST_HPP_
+#endif // define _LIST_HPP_

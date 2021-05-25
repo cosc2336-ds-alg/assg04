@@ -24,10 +24,9 @@
  */
 #ifndef _ASSG_RECURSION_HPP_
 #define _ASSG_RECURSION_HPP_
-#include <iostream>
 #include "List.hpp"
+#include <iostream>
 using namespace std;
-
 
 // function prototypes for Assignment Recursion
 // You will need to add in the correct function protypes for the functions

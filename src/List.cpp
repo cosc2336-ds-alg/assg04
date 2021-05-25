@@ -12,11 +12,10 @@
  * of some of the data structures and abstract data types we
  * will be learning to build and understand.
  */
+#include "List.hpp"
 #include <iostream>
 #include <sstream>
-#include "List.hpp"
 using namespace std;
-
 
 /** default constructor
  * Construct an empty list.  Probably not useful for this
@@ -29,7 +28,6 @@ List::List()
   size = 0;
   values = nullptr;
 }
-
 
 /** standard constructor
  * Construct a list of integer values from a (statically) defined and
@@ -56,7 +54,6 @@ List::List(int size, int values[])
   }
 }
 
-
 /** copy constructor
  * Provide a copy constructor for the List class.  A copy constructor
  * will be invoked whenver you assign one instance of a List to another.
@@ -74,7 +71,7 @@ List::List(const List& list)
   // copy the size of the existing list and allocate memory to hold
   // values we will copy
   size = list.size;
-  values = new int [size];
+  values = new int[size];
 
   // copy the values from the input List into this list
   for (int index = 0; index < size; index++)
@@ -82,7 +79,6 @@ List::List(const List& list)
     values[index] = list.values[index];
   }
 }
-
 
 /** destructor
  * Destructor for the List class.  A List may (or may not) have
@@ -99,7 +95,6 @@ List::~List()
   }
 }
 
-
 /** size accessor
  * Accessor method to get the current size of this List of integers.
  *
@@ -109,7 +104,6 @@ int List::getSize() const
 {
   return size;
 }
-
 
 /** List to string
  * Accessor method to construct and return a string representation
@@ -123,8 +117,7 @@ string List::str() const
   ostringstream out;
 
   // stream list information into the output stream
-  out << "<list> size: " << size
-      << " [ ";
+  out << "<list> size: " << size << " [ ";
 
   // stream the current value sof the list to the output stream
   for (int index = 0; index < size; index++)
@@ -136,7 +129,6 @@ string List::str() const
   // convert the string stream into a concrete string to return
   return out.str();
 }
-
 
 /** indexing operator
  * Provide a way to index individual values in our private
@@ -158,11 +150,10 @@ int& List::operator[](int index)
 {
   // first check that the requsted index is legally
   // within the bounds of the current size of our list
-  if ( (index < 0) or (index >= size)  )
+  if ((index < 0) or (index >= size))
   {
     ostringstream out;
-    out << "Error: illegal bounds access, list size: " << size
-        << " tried to access index address: " << index;
+    out << "Error: illegal bounds access, list size: " << size << " tried to access index address: " << index;
 
     throw ListMemoryBoundsException(out.str(), size, index);
   }
@@ -170,7 +161,6 @@ int& List::operator[](int index)
   // otherwise it is safe to return the reference to this value
   return values[index];
 }
-
 
 /** boolean equals operator
  * Check if this List is equal to the right hand side (rhs)
@@ -207,7 +197,6 @@ bool List::operator==(const List& rhs) const
   return true;
 }
 
-
 /** List output operator
  *@brief overload output stream operator for List type.
  *
@@ -232,7 +221,6 @@ ostream& operator<<(ostream& out, const List& rhs)
   return out;
 }
 
-
 /**
  * @brief ListMemoryBoundsException constructor
  *
@@ -250,17 +238,13 @@ ListMemoryBoundsException::ListMemoryBoundsException(const string& message, int 
   this->index = index;
 }
 
-
 /**
  * @brief ListMemoryBoundsException destructor
  *
  * Destructor for exceptions used for our ListMemoryBoundsException
  * class.
  */
-ListMemoryBoundsException::~ListMemoryBoundsException()
-{
-}
-
+ListMemoryBoundsException::~ListMemoryBoundsException() {}
 
 /**
  * @brief ListMemoryBoundsException message
