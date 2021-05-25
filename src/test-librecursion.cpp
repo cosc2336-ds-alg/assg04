@@ -1,4 +1,4 @@
-/** @file assg-tests.cpp
+/** @file test-librecursion.cpp
  * @brief Unit tests for Assignment Recursion: Writing and
  *   Understanding Recursive Functions.
  *
@@ -18,15 +18,15 @@
  * test assertions.
  */
 #include "List.hpp"
-#include "assg-recursion.hpp"
 #include "catch.hpp"
+#include "librecursion.hpp"
 #include <iostream>
 using namespace std;
 
 /** Tests of the List type you have been given to use for
  * this assignment.
  */
-TEST_CASE("<List> test of List user defined type for this assignment", "[ListTests]")
+TEST_CASE("<List> test of List user defined type for this assignment", "[task0]")
 {
   // construct an empty list
   List l1;
@@ -176,7 +176,7 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[ListTes
  */
 /* Uncomment Task 1 test case to begin working on it.
    TEST_CASE("<sumIterative> function tests",
-    "[task1sumIterative]")
+    "[task1]")
    {
    // test sum of an empty list
    List l0;
@@ -231,7 +231,7 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[ListTes
  */
 /* Uncomment Task 2 test case to begin working on it.
    TEST_CASE("<sumRecusrive> function tests",
-    "[task2sumRecursive]")
+    "[task2]")
    {
    // test sum of an empty list
    List l0;
@@ -285,7 +285,7 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[ListTes
  */
 /* Uncomment Task 3 test case to begin working on it.
    TEST_CASE("<reverseIterative> function tests",
-    "[task3reverseIterative]")
+    "[task3]")
    {
    // check reverse of empty list doesn't croak
    List l1;
@@ -343,7 +343,7 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[ListTes
  */
 /* Uncomment Task 4 test case to begin working on it.
    TEST_CASE("<reverseRecursive> function tests",
-    "[task4reverseRecursive]")
+    "[task4]")
    {
    // check reverse of empty list doesn't croak
    List l1;
@@ -399,7 +399,7 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[ListTes
  */
 /* Uncomment Task 5 test case to begin working on it.
    TEST_CASE("<isPalindromeIterative> function tests",
-    "[task5isPalindromeIterative]")
+    "[task5]")
    {
    // an empty list should be a palindrome
    List l1;
@@ -466,7 +466,7 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[ListTes
  */
 /* Uncomment Task 6 test case to begin working on it.
    TEST_CASE("<isPalindromeRecursive> function tests",
-    "[task6isPalindromeRecursive]")
+    "[task6]")
    {
    // an empty list should be a palindrome
    List l1;

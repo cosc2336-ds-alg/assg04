@@ -69,15 +69,15 @@ using and adding code to for this assignment.
 
 | File Name                                     | Description                                                                                         |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| `src/assg-tests.cpp`                        | Unit tests for the recursive functions class you are to implement.                                  |
+| `src/test-librecursion.cpp`                        | Unit tests for the recursive functions class you are to implement.                                  |
 | `include/List.hpp`                            | Header file for the declarations of the `List` class you will be using and its defined API.         |
 | `src/List.cpp`                                | Implementation file for the `List` member functions that implement the API and class functionality. |
-| `include/assg-recursion.hpp`                | Header file for function prototypes you will be implementing in this assignment.                    |
-| `src/assg-recursion.cpp`                    | Implementation files where you will write your code for this assignment.                            |
+| `include/librecursion.hpp`                | Header file for function prototypes you will be implementing in this assignment.                    |
+| `src/librecursion.cpp`                    | Implementation files where you will write your code for this assignment.                            |
 
 You will not be modifying any code in the `List.[hpp|cpp]` files, you
 will only be using this class.  All of your code will be written in
-the `assg-recursion.[hpp|cpp]` files.  This week, though you are
+the `librecursion.[hpp|cpp]` files.  This week, though you are
 using a class, you will be writing just regular C functions again, not
 class member functions.
 
@@ -89,25 +89,23 @@ you have completed the following setup steps.
    current class semester and section.
 2. Clone the repository using the SSH url to your local class DevBox
    development environment.
-3. Checkout the 'origins/feedback' branch to your locak working DevBox
-   repository.
-4. Configure the project by running the `configure` script from a terminal.
-5. Confirm that the project builds and runs, though no tests will be
+3. Configure the project by running the `configure` script from a terminal.
+4. Confirm that the project builds and runs, though no tests will be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
-6. You should create the issue for Task 1 and/or for all tasks for the assignment
-   now before beginning the first task.  On your GitHub account, go to issues,
-   and create it/them from the issue templates for the assignment.  Also you
-   should close the initial Pull request that should be automatically
-   opened for you, so that you can open your own when commiting your work.
+5. You should create the issue for Task 1 and/or for all tasks for the
+   assignment now before beginning the first task.  On your GitHub
+   account, go to issues, and create it/them from the issue templates
+   for the assignment.  Also you should link the issues with the
+   `Feedback` pull request that has been opened for you.
 
 
 # Assignment Tasks
 
 ## Task 1: Implement `sumIterative()` Function
 
-If you haven't already, create the Task 1 issue on GitHub and close
-the initial Pull request if it is still open.
+If you haven't already, create the Task 1 issue on GitHub and link
+this issue with the `Feedback` pull request.
 
 For the first task we want you to write a function that will take in
 an instance of the given `List` user defined type, and sum up the
@@ -161,11 +159,10 @@ result, the sum of the sub-list it is asked to sum.  Don't forget to document al
 sum up the values, you will be required to use a recursive algorithm in the
 next task.
 
-When you are satisfied with your work and you can compile and pass the first
-set of test in the test case for the `sumIterative()` function, commit your
-changes and push them to the repository using the `feedback` branch.  Then
-document this task completion with a pull request and merge the changes to
-the main branch.
+When you are satisfied with your work and you can compile and pass the
+first set of test in the test case for the `sumIterative()` function,
+commit your changes and push them to the GitHub classroom repository
+`Feedback` pull request.
 
 ## Task 2: Implement `sumRecursive()` Function
 
@@ -208,16 +205,15 @@ recursion.
 
 Implement a recursive case, and test if your sum function using recursion works to
 pass the given unit tests.  Once you have implemented your recursive function and
-you have gotten your tests to pass, commit your changes and push them to the `feedback`
-branch.  Then close out your Task #2 and pull request to documentation the completion
-of this task.
+you have gotten your tests to pass, commit your changes and push them to the `Feedback`
+pull request of your GitHub assignment repository.
 
 
 
 ## Task 3: Implement `reverseIterative()` Function
 
-Make sure that you have created Task 3 and are ready for a new pull request before
-beginning this next task.
+Make sure that you have created the Task 3 issue before beginning this
+next task.
 
 Our next two tasks will work to reverse the `List` of values in place.  So for
 example, if the list is `[ 1 2 3 4 ]`, then calling reverse on the list should
@@ -272,8 +268,8 @@ by calling your `reverseRecursive()` recursively on the
 sub-list from `begin + 1` to `end + 1`.
 
 Once you are satisfied with your implementation of
-`reverseRecursive()` perform the usual steps to commit
-and push your work and document it with a pull request.
+`reverseRecursive()` perform the usual steps to commit and push your
+work and document it with the 'Feedback' pull request.
 
 
 ## Task 5: Implement `isPalindromeIterative()` Function
@@ -345,8 +341,6 @@ sub-list portion, and then see if the results are the same or not.
 
 Once you implement and get your `isPalindromeIterative()` function
 working, commit and push your changes back to your repository.
-Then document the completion of this task 5 with a pull request
-and merge.
 
 
 ## Task 6: Implement `isPalindromeRecursive()` Function
@@ -384,9 +378,10 @@ to test the middle part for palindromy-ness.
 
 Once you are satisfied with your implementation of the
 `isPalindromeRecursive()` function, commit and push
-your changes to the `feedback` branch.  And finish your
-assignment by documenting the completion of this
-task with a pull request.
+your changes to the `Feedback` pull request. This is the
+last task for the assignment, so be sure that all
+autograder actions are successfully passing for your
+committed work.
 
 
 # Assignment Submission

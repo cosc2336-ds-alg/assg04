@@ -1,9 +1,8 @@
-/** @file assg-recursion.hpp
+/** @file librecursion.hpp
  * @brief Header file for Assignment Recursion: Writing and Understanding
  *   Recursive Functions
  *
  * @author Jane Programmer
- * @note   cwid : 123 45 678
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VSCode Server 3.9.3, Gnu Development Tools
  * @note   assg : Assignment Recursion
@@ -22,8 +21,8 @@
  * and member functions should be put into the [.cpp] implementation
  * file.
  */
-#ifndef _ASSG_RECURSION_HPP_
-#define _ASSG_RECURSION_HPP_
+#ifndef _LIBRECURSION_HPP_
+#define _LIBRECURSION_HPP_
 #include "List.hpp"
 #include <iostream>
 using namespace std;
@@ -34,4 +33,4 @@ using namespace std;
 // of your functions should be put into the corresponding [x.cpp]
 // source implementation file.
 
-#endif // _ASSG_RECURSION_HPP_
+#endif // _LIBRECURSION_HPP_

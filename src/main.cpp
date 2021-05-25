@@ -1,4 +1,4 @@
-/** @file assg-main.cpp
+/** @file main.cpp
  * @brief main/debug executable for Assignment Recursion: Writing
  *   and Understanding Recursive Functions
  *
@@ -16,7 +16,7 @@
  * version suitable for running in the debugger.
  */
 #include "List.hpp"
-#include "assg-recursion.hpp"
+#include "librecursion.hpp"
 #include <iostream>
 using namespace std;
 
