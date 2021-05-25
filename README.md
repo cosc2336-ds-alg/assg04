@@ -166,8 +166,8 @@ commit your changes and push them to the GitHub classroom repository
 
 ## Task 2: Implement `sumRecursive()` Function
 
-Make sure you have created Issue 2 for this task.  And it would be best to close
-and merge your first pull request before continuing on to Task 2.
+Make sure you have created Issue 2 for this task and associated the
+issue with the `Feedback` pull request.
 
 For the second task you should implement a recursive version of
 summing a `List` of values.  The function should be named
