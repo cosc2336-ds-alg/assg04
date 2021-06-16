@@ -456,6 +456,17 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[task0]"
    // check bounds checking is working
    CHECK_THROWS_AS( isPalindromeIterative(l5, -1, 11), ListMemoryBoundsException);
    CHECK_THROWS_AS( isPalindromeIterative(l5, 0, 12), ListMemoryBoundsException);
+
+   // issue #x, make sure isPalindrome() is not just checking the first and last
+   // indexes only, an even list
+   int values6[] = {1, 2, 3, 1};
+   List l6(4, values6);
+   CHECK_FALSE(isPalindromeIterative(l6, 0, 3));
+
+   // an odd sized list
+   int values7[] = {1, 2, 3, 4, 1};
+   List l7(5, values7);
+   CHECK_FALSE(isPalindromeIterative(l7, 0, 4));
    }
  */
 
@@ -523,5 +534,16 @@ TEST_CASE("<List> test of List user defined type for this assignment", "[task0]"
    // check bounds checking is working
    CHECK_THROWS_AS( isPalindromeRecursive(l5, -1, 11), ListMemoryBoundsException);
    CHECK_THROWS_AS( isPalindromeRecursive(l5, 0, 12), ListMemoryBoundsException);
+
+   // issue #x, make sure isPalindrome() is not just checking the first and last
+   // indexes only, an even list
+   int values6[] = {1, 2, 3, 1};
+   List l6(4, values6);
+   CHECK_FALSE(isPalindromeRecursive(l6, 0, 3));
+
+   // an odd sized list
+   int values7[] = {1, 2, 3, 4, 1};
+   List l7(5, values7);
+   CHECK_FALSE(isPalindromeRecursive(l7, 0, 4));
    }
  */
