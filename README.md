@@ -265,7 +265,7 @@ For the general recursive case, you should first just swap
 the values from the begin and end indexes of the sub-list.
 Then you can reverse the middle portion of the list
 by calling your `reverseRecursive()` recursively on the
-sub-list from `begin + 1` to `end + 1`.
+sub-list from `begin + 1` to `end - 1`.
 
 Once you are satisfied with your implementation of
 `reverseRecursive()` perform the usual steps to commit and push your
