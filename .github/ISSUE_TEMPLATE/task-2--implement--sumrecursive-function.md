@@ -26,3 +26,4 @@ general case:
 **Additional Requirements**
 
 - Your implementation must be recursive for task 2.  The unit tests can and will pass for a nonrecursive implementation, e.g. for the first sumIterative()` method, but the task will be considered as not being done if recursion is not used to implement this second function.
+- The List should be passed in as a const reference parameter to this function.

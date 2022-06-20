@@ -29,7 +29,8 @@ List::List()
   values = nullptr;
 }
 
-/** standard constructor
+/** @brief standard constructor
+ *
  * Construct a list of integer values from a (statically) defined and
  * provided array of integers.  We simply allocate a block of memory
  * dynamically large enough to hold the values, then copy the values
@@ -54,7 +55,8 @@ List::List(int size, int values[])
   }
 }
 
-/** copy constructor
+/** @brief copy constructor
+ *
  * Provide a copy constructor for the List class.  A copy constructor
  * will be invoked whenver you assign one instance of a List to another.
  * For example
@@ -80,7 +82,8 @@ List::List(const List& list)
   }
 }
 
-/** destructor
+/** @brief destructor
+ *
  * Destructor for the List class.  A List may (or may not) have
  * a dynamically allocated block of memory associated with it.
  * Free up this block on destruction of a List instance.
@@ -95,7 +98,8 @@ List::~List()
   }
 }
 
-/** size accessor
+/** @brief size accessor
+ *
  * Accessor method to get the current size of this List of integers.
  *
  * @returns int Returns the current size of the list of integers.
@@ -105,7 +109,8 @@ int List::getSize() const
   return size;
 }
 
-/** List to string
+/** @brief List to string
+ *
  * Accessor method to construct and return a string representation
  * of the current values and status of this List instance.
  *
@@ -130,7 +135,8 @@ string List::str() const
   return out.str();
 }
 
-/** indexing operator
+/** @brief indexing operator
+ *
  * Provide a way to index individual values in our private
  * internal array of integers.  This allows code to, for the
  * most part, treated an instance of our List as if it were
@@ -162,7 +168,46 @@ int& List::operator[](int index)
   return values[index];
 }
 
-/** boolean equals operator
+/** @brief indexing operator (const return by value)
+ *
+ * Provide a way to index individual values in our private
+ * internal array of integers.  This allows code to, for the
+ * most part, treated an instance of our List as if it were
+ * an array, though we also provide bounds checking to ensure
+ * no illegal access beyond the list bounds is attempted.
+ *
+ * Provide a const member function version that returns a copy of
+ * the value.  Can be used on right hand side to read a value out
+ * of the list, so we can pass in a List as a const List& (a
+ * constant reference parameter).
+ *
+ * @param index The index of the value it is desired to access from
+ *   this List.
+ *
+ * @returns int Returns a copy of the value to the requested List item at
+ *   the requested index.
+ *
+ * @throws ListMemoryBoundsException if a request for an index beyond
+ *   the end of the array (or less than 0) is made.
+ */
+int List::operator[](int index) const
+{
+  // first check that the requsted index is legally
+  // within the bounds of the current size of our list
+  if ((index < 0) or (index >= size))
+  {
+    ostringstream out;
+    out << "Error: illegal bounds access, list size: " << size << " tried to access index address: " << index;
+
+    throw ListMemoryBoundsException(out.str(), size, index);
+  }
+
+  // otherwise it is safe to return the reference to this value
+  return values[index];
+}
+
+/** @brief boolean equals operator
+ *
  * Check if this List is equal to the right hand side (rhs)
  * list.  The lists are equal if their sizes are equal, and if
  * all elements in both lists are equal.
@@ -197,8 +242,7 @@ bool List::operator==(const List& rhs) const
   return true;
 }
 
-/** List output operator
- *@brief overload output stream operator for List type.
+/** @brief List output operator
  *
  * Overload the output stream operator so that we can display current
  * values of a List on standard output.
