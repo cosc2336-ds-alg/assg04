@@ -1,7 +1,7 @@
 ---
 title: 'Assignment Recursion: Understanding and Writing Recursive Functions '
 author: 'COSC 2336: Data Structures and Algorithms'
-date: 'Summer 2021'
+date: 'Spring 2024'
 ---
 
 
@@ -69,7 +69,7 @@ using and adding code to for this assignment.
 
 | File Name                                     | Description                                                                                         |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| `src/test-librecursion.cpp`                        | Unit tests for the recursive functions class you are to implement.                                  |
+| `src/assg04-tests.cpp`                        | Unit tests for the recursive functions class you are to implement.                                  |
 | `include/List.hpp`                            | Header file for the declarations of the `List` class you will be using and its defined API.         |
 | `src/List.cpp`                                | Implementation file for the `List` member functions that implement the API and class functionality. |
 | `include/librecursion.hpp`                | Header file for function prototypes you will be implementing in this assignment.                    |
@@ -88,12 +88,12 @@ you have completed the following setup steps.
    assignment invitation link for 'Assignment Recursion' for our
    current class semester and section.
 2. Clone the repository using the SSH url to your local class DevBox
-   development environment.
-3. Configure the project by running the `configure` script from a terminal.
-4. Confirm that the project builds and runs, though no tests will be
+   development environment. Make sure that open the cloned
+   folder and restart inside of the correct Dev Container.
+3. Confirm that the project builds and runs, though no tests will be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
-5. You should create the issue for Task 1 and/or for all tasks for the
+4. You should create the issue for Task 1 and/or for all tasks for the
    assignment now before beginning the first task.  On your GitHub
    account, go to issues, and create it/them from the issue templates
    for the assignment.  Also you should link the issues with the
