@@ -3,7 +3,7 @@
  *   Writing and Understanding Recursive Functions
  *
  * @author Jane Programmer
- * @note   class: COSC 2336, Summer 2021
+ * @note   class: COSC 2336, Spring 2024
  * @note   ide  : VSCode Server 3.9.3, Gnu Development Tools
  * @note   assg : Assignment Recursion
  * @date   June 1, 2021
