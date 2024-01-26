@@ -23,12 +23,12 @@
 #include <iostream>
 using namespace std;
 
-#define task1
-#define task2
-#define task3
-#define task4
-#define task5
-#define task6
+#undef task1
+#undef task2
+#undef task3
+#undef task4
+#undef task5
+#undef task6
 
 /** Tests of the List type you have been given to use for
  * this assignment.
