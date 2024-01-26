@@ -17,10 +17,10 @@ base case:
 - If the list is of size 1 or smaller, then the `List` is trivially a palindrome, so return `true`.
 
 general recursive case:
-- if the `begin` index value is not equal to the `end` index value, then the list can't be a palindrome, so return `false`.
-- otherwise, if the ends are equal, then whether the middle part of the list is a palindrome can be determined by recursively calling the function for the indexes from `begin + 1` to `end - 1`.
+- if the value in the `begin` index is not equal to the value at `end` index, then the list can't be a palindrome, so return `false`.
+- otherwise, if the end values are equal, then whether the middle part of the list is a palindrome can be determined by recursively calling the function for the indexes from `begin + 1` to `end - 1`.
 
 **Additional Requirements**
 
 - Your implementation must be recursive for task 6.  The unit tests can and will pass for a nonrecursive implementation, e.g. for the first `sumIterative()` method, but the task will be considered as not being done if recursion is not used to implement this second function.
-- Being recursive does not mean calling another recursive function.  For example, it is not a correct implementation to use the task 5 algorithm but calling `reverseRecursive` to reverse the copy of the list.  You must use actual recursion (calling the function inside of itself) in this task.
+- Being recursive does not mean calling another recursive function.  For example, it is not a correct implementation to use the task 5 algorithm but calling `reverseRecursive` to reverse the copy of the list.  You must use actual recursion (calling the function `isPalindromeRecursive()` inside of itself) in this task.

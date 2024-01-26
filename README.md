@@ -88,10 +88,11 @@ you have completed the following setup steps.
    assignment invitation link for 'Assignment Recursion' for our
    current class semester and section.
 2. Clone the repository using the SSH url to your local class DevBox
-   development environment. Make sure that open the cloned
-   folder and restart inside of the correct Dev Container.
-3. Confirm that the project builds and runs, though no tests will be
-   defined or run initially.  If the project does not build on the first
+   development environment. Make sure that you reopen the cloned
+   folder and restart inside of the correct remote  Dev Container.
+3. Confirm that the project builds and runs.  For this project some
+   tests of the `List` class should run and pass when you initially
+   start the assignment.  If the project does not build on the first
    checkout, please inform the instructor.
 4. You should create the issue for Task 1 and/or for all tasks for the
    assignment now before beginning the first task.  On your GitHub
@@ -126,13 +127,13 @@ to understand how you will use this class in your own functions.
 Start by uncommenting the next test case with the set of tests for the
 `sumIterative()` function.  As usual you are encouraged to practice
 incremental programming.  Uncomment this test case, create the
-function prototype in the `assg-recursion.hpp` header file, and create
+function prototype in the `librecursion.hpp` header file, and create
 an empty stub function that simply returns a 0 result.  This should allow
 you to have a program that compiles and runs the tests cases for your
 first function, though the tests will not be passing yet.
 
 As another wrinkle, you have not been given the function documentation for the
-function you are to write in the `assg-recursion.cpp` header file.  You
+function you are to write in the `librecursion.cpp` header file.  You
 are required to write correct function documentation for your functions this
 week.  This includes a short title, a longer description, and documenting the
 input parameters and return value using `@param` and `@returns` tags
@@ -228,8 +229,7 @@ These two functions will both be `void` functions.  They will not return an
 explicit result.  Instead as a result of calling them, they will reverse the
 values of the list they are given as input in place.
 
-For your iterative solution, you should implement the following
-algorithm using a loop, you should do the following as a loop as long
+For your iterative solution, you should do the following as a loop as long
 as begin is less than end `(begin < end)`:
 
 1. Swap the values at the begin and end indexes.
@@ -281,7 +281,7 @@ palindrome as we described in the assignment description.
 
 The `isPalindromeIterative()` takes the same 3 parameters
 as for the previous functions in this assignment.  The
-`isPalindrome` functions will return a boolean result
+`isPalindrome` function will return a boolean result
 of `true` if the sub-list is a palindrome or `false`
 if the sub-list is not a palindrome.
 
@@ -293,8 +293,8 @@ or not is to:
 1. make a copy of the `List`
 2. reverse the sub-list portion of this copy
 3. Compare the original and the copy with the reverse sub-list.  
-   - If they are equal, then the reversed sup-list was a palindrome, so you can
-     return `true`.  
+   - If they are equal, then the reversed sub-list was a palindrome, so you can
+     return `true`.
    - If they are not equal after the reverse, then the 
      sub-list was not a palindrome.
 
@@ -352,8 +352,8 @@ non-recursive version.
 
 The base case is again going to be similar for your
 recursive function to determine if the list is a
-palindrome or not.  List of size 1 or smaller are
-trivially considered palindromes.  So `true` should
+palindrome or not.  A List of size 1 or smaller is
+trivially considered a palindrome.  So `true` should
 just be returned immediately if the sub-list being
 checked is of size 1 or smaller.
 
@@ -364,16 +364,15 @@ so you should not be calling the `reverseRecursive()` function,
 that is not what we mean by a recursive implementation of the
 `isPalindrome` test.
 
-To check if a list is a palindrome that does not fit
-the base case, first test if the `begin` and `end` 
-values are equal or not.  If they are not equal then
-you know the list is not a palindrome, and you can
-immediately return `false`.
+To check if a list is a palindrome that does not fit the base case,
+first test if the values at the `begin` and `end` indexes of the
+`List` are equal or not.  If they are not equal then you know the list
+is not a palindrome, and you can immediately return `false`.
 
 If they are equal, then the list is a palindrome only if the
 sub-list from `begin + 1` to `end - 1` is a 
 palindrome.  So to find that out, you have to call your
-`isPalindromeRecursive()` recursive on this sub-list
+`isPalindromeRecursive()` function recursively on this sub-list
 to test the middle part for palindromy-ness.
 
 Once you are satisfied with your implementation of the

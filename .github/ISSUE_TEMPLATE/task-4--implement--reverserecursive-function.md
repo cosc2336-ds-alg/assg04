@@ -11,8 +11,6 @@ assignees: ''
 
 The fourth task is to implement the `reverseRecursive()` function.  This function will have the same signature as the iterative version of reverse, it is a `void` function that takes a `List` reference and `begin` and `end` indexes as input.  This function should perform the same operation as task 3 and reverse the values of the list inplace.
 
-The purpose of `digitAtPosition()` is to index into the `LargeInteger` and return the digit at a particular location (digit place) of the instance.
-
 
 **Suggested Solution**
 
